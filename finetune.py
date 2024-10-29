@@ -23,8 +23,8 @@ lora_config = LoraConfig(
 )
 model = get_peft_model(model, lora_config)
 
-max_length = 128
-with open('processed_dataset_id.json', 'r') as f:
+max_length = 1024
+with open('processed_dataset_id', 'r') as f:
     data = json.load(f)[:1]  
 
 class CodeDataset(torch.utils.data.Dataset):
