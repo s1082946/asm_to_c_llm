@@ -23,7 +23,7 @@ lora_config = LoraConfig(
 )
 model = get_peft_model(model, lora_config)
 
-max_length = 1024
+max_length = 2048
 with open('processed_dataset_id', 'r') as f:
     data = json.load(f)[:1]  
 
